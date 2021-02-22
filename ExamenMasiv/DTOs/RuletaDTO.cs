@@ -1,9 +1,14 @@
-﻿namespace ExamenMasiv.DTOs
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace ExamenMasiv.DTOs
 {
     public class RuletaDTO
     {
         public int Id { get; set; }
-        public int Number { get; set; }
-        public string Colour { get; set; }
+        [Required]
+        public string Name { get; set; }
+        public DateTime Date { get; set; }
+        public bool Active { get; set; }
     }
 }

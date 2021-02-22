@@ -9,6 +9,8 @@ namespace ExamenMasiv.Models
     {
         [Column("id")]
         public int Id { get; set; }
+        [Column("name")]
+        public string Name { get; set; }
         [Column("date")]
         public DateTime Date { get; set; }
         [Column("active")]
