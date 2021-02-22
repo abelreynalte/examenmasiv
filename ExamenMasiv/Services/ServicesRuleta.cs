@@ -23,7 +23,6 @@ namespace ExamenMasiv.Services
             try
             {
                 return await GetAll()
-                //.OrderByDescending(c => c.Id)
                 .ToListAsync();
             }
             catch (Exception ex)
