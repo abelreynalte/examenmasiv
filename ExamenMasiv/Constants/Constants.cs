@@ -6,6 +6,7 @@ namespace ExamenMasiv.Constants
     {
         public const string SUCCESS = "0000";
         public const string ERROR_GENERIC = "1001";
+        public const int zero = 0;
         private static Dictionary<string, string> _Message;
 
         public static Dictionary<string, string> Message
