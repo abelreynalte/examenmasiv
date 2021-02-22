@@ -35,14 +35,14 @@ namespace ExamenMasiv.Controllers
             }
             var ruletaModel = AutoMapper.AutoMapperConfiguration.Mapper.Map<Ruleta>(ruleta);
 
-            return OkRequestResponse(OutJsonModel.BuildOk(await _servicesRuleta.Create(ruletaModel)));
+            return OkRequestResponse(OutJsonModel.BuildOk(await _servicesRuleta.Save(ruletaModel)));
         }
 
         [AllowAnonymous]
         [HttpGet("GetAll")]
         public async Task<HttpResponseMessage> GetAll()
         {
-            var response = await _servicesRuleta.GetRuleta();
+            var response = await _servicesRuleta.Get();
 
             return OkRequestResponse(OutJsonModel.BuildOk(response));
         }

@@ -14,11 +14,15 @@ namespace ExamenMasiv.Services
 
         }
 
-        public async Task<Ruleta> GetRuleta()
+        public async Task<Ruleta> Get()
         {
             return await GetAll()
                 .OrderByDescending(c => c.Id)
                 .FirstOrDefaultAsync();
+        }
+        public async Task<Ruleta> Save(Ruleta ruleta)
+        {
+            return await Create(ruleta);
         }
     }
 }

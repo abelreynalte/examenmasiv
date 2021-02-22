@@ -6,6 +6,7 @@ namespace ExamenMasiv.Services
 {
     public interface IServicesRuleta: IGenericRepository<Ruleta>
     {
-        Task<Ruleta> GetRuleta();
+        Task<Ruleta> Get();
+        Task<Ruleta> Save(Ruleta ruleta);
     }
 }
