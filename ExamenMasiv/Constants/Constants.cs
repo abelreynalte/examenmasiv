@@ -19,5 +19,10 @@ namespace ExamenMasiv.Constants
                     });
             }
         }
+        public static class RandomRuleta
+        {
+            public const int numberFrom = 1;
+            public const int numberTo = 30;
+        }
     }
 }

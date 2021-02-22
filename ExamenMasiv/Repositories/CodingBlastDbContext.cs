@@ -11,6 +11,7 @@ namespace ExamenMasiv.Repositories
         }
 
         public DbSet<Ruleta> Ruletas { get; set; }
+        public DbSet<RuletaDetail> RuletasDet { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

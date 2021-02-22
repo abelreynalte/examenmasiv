@@ -11,10 +11,11 @@ namespace ExamenMasiv.Services
 {
     public class ServicesRuleta: GenericRepository<Ruleta>, IServicesRuleta
     {
-        public ServicesRuleta(CodingBlastDbContext dbContext)
+        private readonly IServicesRuletaDetail _servicesRuletaDet;
+        public ServicesRuleta(CodingBlastDbContext dbContext, IServicesRuletaDetail servicesRuletaDetail)
         : base(dbContext)
         {
-
+            _servicesRuletaDet = servicesRuletaDetail;
         }
 
         public async Task<List<Ruleta>> Get()
@@ -36,7 +37,22 @@ namespace ExamenMasiv.Services
             var identifier = Guid.NewGuid();
             try
             {
-                return await Create(ruleta);
+                var entity = await Create(ruleta);
+                short colourid = 1;
+                int[] arr = Util.generateNoRepeatingRandomNumbers(30, 1, 30);
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    if (colourid == 1) colourid = 2; else colourid = 1;
+                    var ruletaDet = new RuletaDetail() {
+                        RuletaId = entity.Id,
+                        Number = arr[i],
+                        ColourId = colourid,
+                        Amount = Convert.ToDecimal(Util.generateNumberRandom(1, 10000))
+                    };
+                    var entitydetail = await _servicesRuletaDet.Save(ruletaDet);
+                }
+
+                return entity;
             }
             catch (Exception ex)
             {

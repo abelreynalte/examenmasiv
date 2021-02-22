@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using ExamenMasiv.Repositories;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ExamenMasiv.Models
 {
     [Table("ruletadetail")]
-    public class RuletaDetail
+    public class RuletaDetail: IEntity
     {
         [Column("id")]
         public int Id { get; set; }
