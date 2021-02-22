@@ -7470,6 +7470,7 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "Microsoft.AspNet.WebApi.Core >= 5.2.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.3",
+      "Microsoft.Extensions.DependencyInjection >= 5.0.1",
       "NLog >= 4.7.7"
     ]
   },
@@ -7535,6 +7536,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[5.0.3, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[5.0.1, )"
           },
           "NLog": {
             "target": "Package",

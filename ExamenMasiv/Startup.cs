@@ -10,6 +10,7 @@ using NLog.Common;
 using NLog;
 using NLog.AWS.Logger;
 using ExamenMasiv.AutoMapper;
+using ExamenMasiv.Services;
 
 namespace ExamenMasiv
 {
@@ -25,11 +26,13 @@ namespace ExamenMasiv
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers();            
             services.AddDbContext<CodingBlastDbContext>(
                     opt => opt.UseSqlServer(Configuration.GetConnectionString("DevConnection"))
                 );
-            services.AddAutoMapper(typeof(BusinessEntitiesToDataEntitiesMappingProfile).Assembly);
+            services.AddAutoMapper(typeof(BusinessEntitiesToDataEntitiesMappingProfile).Assembly);            
+            services.AddScoped<IServicesRuleta, ServicesRuleta>();
+            services.AddScoped<IServicesRuletaDetail, ServicesRuletaDetail>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -68,3 +68,4 @@ C:\Users\usuario\source\repos\examenmasiv\ExamenMasiv\obj\Debug\netcoreapp3.1\Ex
 C:\Users\usuario\source\repos\examenmasiv\ExamenMasiv\obj\Debug\netcoreapp3.1\ExamenMasiv.dll
 C:\Users\usuario\source\repos\examenmasiv\ExamenMasiv\obj\Debug\netcoreapp3.1\ExamenMasiv.pdb
 C:\Users\usuario\source\repos\examenmasiv\ExamenMasiv\obj\Debug\netcoreapp3.1\ExamenMasiv.genruntimeconfig.cache
+C:\Users\usuario\source\repos\examenmasiv\ExamenMasiv\obj\Debug\netcoreapp3.1\ExamenMasiv.csprojAssemblyReference.cache

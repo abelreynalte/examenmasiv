@@ -10,6 +10,7 @@
     <PackageReference Include="AWS.Logger.NLog" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
     <PackageReference Include="NLog" Version="4.7.7" />
   </ItemGroup>
 

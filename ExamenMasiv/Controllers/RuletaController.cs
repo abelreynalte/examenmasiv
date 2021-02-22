@@ -9,6 +9,8 @@ using System.Net.Http;
 using Microsoft.AspNetCore.Http;
 using ExamenMasiv.Models;
 using System.Web.Http.Description;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace ExamenMasiv.Controllers
 {
@@ -39,6 +41,7 @@ namespace ExamenMasiv.Controllers
 
         [AllowAnonymous]
         [HttpGet("GetAll")]
+        [ResponseType(typeof(OutResponseType<List<Ruleta>>))]
         public async Task<HttpResponseMessage> GetAll()
         {
             var response = await _servicesRuleta.Get();
@@ -113,6 +116,6 @@ namespace ExamenMasiv.Controllers
             {
                 return View();
             }
-        }
+        }        
     }
 }
