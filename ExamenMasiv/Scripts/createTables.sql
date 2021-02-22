@@ -6,8 +6,9 @@ go
 
 create table ruleta(
 	id int identity(1,1) primary key,
+	name varchar(100),
 	date datetime default(getdate()),
-	active bit
+	active bit default(1)
 )
 go
 
