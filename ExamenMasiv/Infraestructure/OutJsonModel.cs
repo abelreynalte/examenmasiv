@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ExamenMasiv.Constants;
-
-namespace ExamenMasiv.Infraestructure
+﻿namespace ExamenMasiv.Infraestructure
 {
     public class OutJsonModel
     {

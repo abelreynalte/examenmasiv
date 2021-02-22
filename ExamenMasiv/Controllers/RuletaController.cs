@@ -9,7 +9,6 @@ using System.Net.Http;
 using Microsoft.AspNetCore.Http;
 using ExamenMasiv.Models;
 using System.Web.Http.Description;
-using AutoMapper;
 
 namespace ExamenMasiv.Controllers
 {

@@ -1,4 +1,5 @@
 ﻿using ExamenMasiv.Repositories;
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ExamenMasiv.Models
@@ -8,9 +9,10 @@ namespace ExamenMasiv.Models
     {
         [Column("id")]
         public int Id { get; set; }
-        [Column("number")]
-        public int Number { get; set; }
-        [Column("colour")]
-        public string Colour { get; set; }
+        [Column("date")]
+        public DateTime Date { get; set; }
+        [Column("active")]
+        public bool Active { get; set; }
+        public RuletaDetail detail { get; set; }
     }
 }
